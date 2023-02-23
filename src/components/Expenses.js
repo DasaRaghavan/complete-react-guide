@@ -1,6 +1,6 @@
 import "./expenses.css"
 import ExpenseItem from "./ExpenseItem"
-function Expenses(props) {
+function Expenses() {
 
     const expenses = [
         { id: 'e1', title: 'Toilet Paper', amount: 94.12, date: new Date(2020, 7, 14) },
