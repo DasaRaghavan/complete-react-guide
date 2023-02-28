@@ -1,7 +1,8 @@
-import "./expenses.css"
+import React from "react";
+import "../css/expenses.css"
 import ExpenseItem from "./ExpenseItem"
-import Card from "./Card"
-function Expenses() {
+import Card from "../commonUI/Card.js"
+const Expenses = () => {
 
     const expenses = [
         { id: 'e1', title: 'Toilet Paper', amount: 94.12, date: new Date(2020, 7, 14) },
