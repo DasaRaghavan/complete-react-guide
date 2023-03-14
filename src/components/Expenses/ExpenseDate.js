@@ -11,6 +11,7 @@ const ExpenseDate = (props) => {
         <div className="expense-date__year">{expenseYear}</div>
         <div className="expense-date__day">{expenseDate}</div>
       </div>
+      
     );
 }
 
