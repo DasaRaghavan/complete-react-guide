@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import '../css/ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [enteredExpenseTitle, setEnteredExpenseTitle] = useState('')
     const [enteredExpenseAmount, setEnteredExpenseAmount] = useState('')
     const [enteredExpenseDate, setEnteredExpenseDate] = useState('')
@@ -36,7 +36,7 @@ const ExpenseForm = () => {
             amount: enteredExpenseAmount,
             date: localDate
         }
-        console.log(expenseData)
+        props.onSaveExpense(expenseData)  //send object to parent (NewExpense.js)
 
         // reset the fields to empty
         setEnteredExpenseTitle('')
