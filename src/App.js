@@ -5,7 +5,6 @@ import NewExpense from "./components/NewExpenses/NewExpense";
 const App = () => {
   return (
     <div>
-      <h1>Let's get started</h1>
       <NewExpense />
       <Expenses />
     </div>
