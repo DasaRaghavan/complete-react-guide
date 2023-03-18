@@ -11,8 +11,6 @@ const Expenses = (props) => {
     }
     console.log(selectedYear)
 
-    
-
     return (
       <div>
           <Card className="expenses">
