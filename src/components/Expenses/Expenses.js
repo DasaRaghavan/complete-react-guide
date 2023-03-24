@@ -11,12 +11,18 @@ const Expenses = (props) => {
     }
     console.log(selectedYear)
 
+    // filter the expense array being received as props.items and render the filered expense array
+    const filteredExpenses = props.items.filter((e) => 
+      e.date.getUTCFullYear().toString() === selectedYear
+    )
+
+
     return (
       <div>
           <Card className="expenses">
             <ExpenseFilter initialSelection={selectedYear} onFilterChange={FilterChangeHandler} />
-            {props.items.map((expense) => (
-            <ExpenseItem 
+            {filteredExpenses.map((expense) => 
+             (<ExpenseItem 
               key={expense.id}
               title={expense.title} 
               amount={expense.amount} 
