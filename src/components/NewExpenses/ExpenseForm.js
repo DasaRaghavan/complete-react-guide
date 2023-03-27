@@ -18,6 +18,11 @@ const ExpenseForm = (props) => {
         setEnteredExpenseDate(event.target.value)
     }
 
+    const cancelHandler = (event) => {
+        event.preventDefault()
+        props.onCancelExpense(event.target.value)
+    }
+
     const submitHandler = (event) => {
         event.preventDefault()
         // React gets date as UTC always
@@ -43,8 +48,8 @@ const ExpenseForm = (props) => {
         setEnteredExpenseAmount('')
         setEnteredExpenseDate('')
         // end reset
+        
     }
-
 
     return <div>
         <form onSubmit={submitHandler}>
@@ -69,9 +74,9 @@ const ExpenseForm = (props) => {
                 </div>
             </div>
             <div className='.new-expense__actions'>
-                <button type='submit'>Add Expense</button>
+                <button type='submit' value='Cancel' onClick={cancelHandler}>Cancel</button>
+                <button type='submit' value='Add'>Add Expense</button>
             </div>
-
         </form>
     </div>
 }
