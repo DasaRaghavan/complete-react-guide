@@ -17,7 +17,7 @@ const Expenses = (props) => {
     const filteredExpenses = props.items.filter((e) => 
       e.date.getUTCFullYear().toString() === selectedYear
     )
-
+    
     
 
     return (

@@ -3,7 +3,7 @@ import ExpenseForm from './ExpenseForm.js'
 import '../css/NewExpense.css'
 
 const NewExpense = (props) => {
-    const [addNewExpense, setAddNewExpense] = useState(true)
+    const [addNewExpense, setAddNewExpense] = useState(false)
 
     const addNewExpenseButtonHandler = () => {
         setAddNewExpense(true)
