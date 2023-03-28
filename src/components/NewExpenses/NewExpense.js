@@ -25,17 +25,15 @@ const NewExpense = (props) => {
         }
         
     }
-    if (!addNewExpense) {
-        return <div className='new-expense'>
-            <button onClick={addNewExpenseButtonHandler}>Add New Expense</button>
-        </div>
-    }    
+
+    return <div className='new-expense'>
+        { !addNewExpense && <button onClick={addNewExpenseButtonHandler}>Add New Expense</button> }
+        { addNewExpense && <ExpenseForm onSaveExpense={addExpenseHandler} 
+                                        onCancelExpense={cancelExpenseHandler} /> }
+    </div>
+       
     
-    if (addNewExpense) {
-        return <div className='new-expense'>
-            <ExpenseForm onSaveExpense={addExpenseHandler} onCancelExpense={cancelExpenseHandler} />
-        </div>  
-    }
+   
     
 }
 
